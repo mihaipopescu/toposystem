@@ -1,13 +1,48 @@
 # Site settings
 title: TopoSystem Craiova
+description: Firmă de cadastru, topografie și proiecte edilitare
 email: sorin.popescu@toposystem.ro
-description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://toposystem.ro" # the base hostname & protocol for your site
+url: "https://toposystem.ro" # the base hostname & protocol for your site
+lang: ro
 
+# Contact info
 mobile: 0744699280
 fax: 0251417842
 address: Str. Mihail Kogălniceanu, nr. 19, bl. 97, sc. E, Ap. 12, Craiova
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - README.md
+
+# Enable SCSS processing
+sass:
+  style: compressed
+
+# Plugin settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO
+author:
+  name: TopoSystem Craiova
+  email: sorin.popescu@toposystem.ro
+
+# Performance
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]

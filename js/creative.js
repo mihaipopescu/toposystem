@@ -1,48 +1,45 @@
 /*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * TopoSystem - Creative Theme
+ * Modernized for Bootstrap 5 and contemporary JavaScript
  */
 
 (function($) {
-    "use strict"; // Start of use strict
+    "use strict";
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function(event) {
+    // Smooth page scrolling for anchor links
+    $('a.page-scroll').on('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
+        var target = $($anchor.attr('href'));
+        
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: (target.offset().top - 70)
+            }, 1000);
+        }
     });
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    })
-
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
-        $('.navbar-toggle:visible').click();
+    // Update navbar on scroll
+    $(window).on('scroll', function() {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop > 100) {
+            $('#mainNav').addClass('bg-dark');
+        } else {
+            $('#mainNav').removeClass('bg-dark');
+        }
     });
 
-    // Fit Text Plugin for Main Header
-    $("h1").fitText(
-        1.2, {
-            minFontSize: '35px',
-            maxFontSize: '65px'
+    // Close responsive menu when link is clicked
+    $('.navbar-collapse a:not(.dropdown-toggle)').on('click', function() {
+        var toggle = document.querySelector('[type="button"][data-bs-toggle="collapse"]');
+        if (toggle && toggle.offsetParent !== null) {
+            toggle.click();
         }
-    );
+    });
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    })
+    // Initialize WOW.js for scroll animations
+    if (typeof WOW !== 'undefined') {
+        new WOW().init();
+    }
 
-    // Initialize WOW.js Scrolling Animations
-    new WOW().init();
-
-})(jQuery); // End of use strict
+})(jQuery);
