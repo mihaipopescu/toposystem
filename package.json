@@ -1,0 +1,21 @@
+{
+  "name": "toposystem-website",
+  "version": "2.0.0",
+  "description": "TopoSystem Craiova - Cadastru și Topografie",
+  "scripts": {
+    "dev": "jekyll serve --livereload",
+    "build": "jekyll build",
+    "clean": "jekyll clean"
+  },
+  "keywords": [
+    "cadastru",
+    "topografie",
+    "topographic",
+    "craiova"
+  ],
+  "author": "TopoSystem Craiova",
+  "license": "MIT",
+  "devDependencies": {
+    "jekyll": "^4.3.0"
+  }
+}
