@@ -1,7 +1,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand page-scroll" href="#contact">
-            <i class="fas fa-phone"></i> 0251417842 | 0744699280
+        <a class="navbar-brand" href="tel:+4{{ site.mobile }}" aria-label="Sună TopoSystem la {{ site.mobile }}">
+            <i class="fas fa-phone" aria-hidden="true"></i> {{ site.mobile }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,16 +9,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#about">Acasă</a>
+                    <a class="nav-link" href="{{ '/' | relative_url }}">Acasă</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">Servicii</a>
+                    <a class="nav-link" href="{{ '/#services' | relative_url }}">Servicii</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#portfolio">Portfoliu</a>
+                    <a class="nav-link" href="{{ '/#certificates' | relative_url }}">Certificări</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    <a class="nav-link" href="{{ '/#contact' | relative_url }}">Contact</a>
                 </li>
             </ul>
         </div>

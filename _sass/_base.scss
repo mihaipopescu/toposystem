@@ -105,6 +105,10 @@ aside {
     }
     &.bg-dark {
         background-color: white !important;
+        .navbar-toggler {
+            border-color: rgba($theme-dark, .2);
+            filter: invert(1);
+        }
         .navbar-brand {
             color: $theme-primary;
             &:hover,
@@ -318,5 +322,212 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
+}
+
+// Conversion-focused hero
+.hero-kicker {
+    @include sans-serif-font;
+    margin-bottom: 16px !important;
+    color: rgba(white, .85) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+header .header-content .header-content-inner {
+    .hero-lead {
+        margin-bottom: 28px;
+    }
+    .hero-contact-note {
+        margin: 18px auto 0;
+        font-size: 14px;
+        color: rgba(white, .8);
+    }
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background: rgba(black, .12);
+    &:hover,
+    &:focus {
+        color: $theme-dark;
+        background: white;
+    }
+}
+
+.mobile-contact-bar {
+    position: fixed;
+    z-index: 1100;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 -4px 18px rgba(black, .2);
+    a {
+        padding: 14px 10px;
+        color: white;
+        background: $theme-dark;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        &:last-child {
+            background: $theme-primary;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-bottom: 52px;
+    }
+}
+
+// Trust strip
+.trust-strip {
+    padding: 32px 0;
+    color: white;
+    background: $theme-dark;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 340px;
+    margin: 0 auto;
+    i {
+        width: 44px;
+        color: $theme-primary;
+        font-size: 30px;
+        text-align: center;
+    }
+    strong,
+    span {
+        display: block;
+    }
+    strong {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    span {
+        margin-top: 3px;
+        color: rgba(white, .7);
+        font-size: 14px;
+        line-height: 1.35;
+    }
+}
+
+// Service cards and detail pages
+.service-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 28px 22px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(black, .06);
+    h3 {
+        margin-top: 22px;
+        font-size: 21px;
+    }
+    p {
+        margin-bottom: 22px;
+    }
+    .service-link {
+        margin-top: auto;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
+
+.service-page .navbar-dark {
+    background: white !important;
+    box-shadow: 0 2px 12px rgba(black, .08);
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        color: $theme-dark;
+    }
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+        color: $theme-primary;
+    }
+    .navbar-toggler {
+        border-color: rgba(black, .2);
+        filter: invert(1);
+    }
+}
+
+.service-hero {
+    min-height: auto;
+    padding: 150px 0 90px;
+    background-image: linear-gradient(rgba(black, .62), rgba(black, .72)), url('../img/header.jpg');
+    text-align: center;
+    h1 {
+        max-width: 900px;
+        margin: 0 auto 22px;
+        font-size: clamp(34px, 5vw, 56px);
+    }
+    > .container > p:not(.hero-kicker) {
+        max-width: 760px;
+        margin: 0 auto 30px;
+        color: rgba(white, .85);
+        font-size: 18px;
+    }
+}
+
+.service-content {
+    h2 {
+        margin-top: 42px;
+        margin-bottom: 18px;
+        font-size: 28px;
+    }
+    h2:first-child {
+        margin-top: 0;
+    }
+    li {
+        margin-bottom: 9px;
+        font-size: 17px;
+        line-height: 1.55;
+    }
+}
+
+.service-cta {
+    margin-top: 56px;
+    padding: 36px;
+    border-left: 5px solid $theme-primary;
+    border-radius: 6px;
+    background: #f7f7f7;
+    h2 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header .header-content {
+        padding-top: 130px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .service-hero {
+        padding: 125px 20px 70px;
+    }
+    .service-cta {
+        padding: 26px 22px;
+    }
 }
 
