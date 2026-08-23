@@ -4,166 +4,37 @@
             <div class="col-lg-8">
                 <p class="section-eyebrow">Experiență documentată</p>
                 <h2 class="section-heading">Proiecte realizate în timp</h2>
-                <p class="projects-lead">70 de proiecte de cadastru, topografie și infrastructură realizate între 1992 și 2026, organizate după tipul lucrării.</p>
+                <p class="projects-lead">Lucrări de cadastru, topografie și infrastructură realizate între 1992 și 2026 în Dolj și Vâlcea.</p>
             </div>
             <div class="col-lg-4">
                 <div class="project-archive-summary">
                     <strong>{{ site.data.projects | size }}</strong>
-                    <span>proiecte documentate<br>în Dolj și Vâlcea</span>
+                    <span>proiecte<br>documentate</span>
                 </div>
             </div>
         </div>
 
-        <div class="project-type-grid" aria-label="Tipuri de proiecte">
-            <button type="button" class="project-type" data-project-filter="systematic" aria-pressed="false">
+        <div class="project-type-grid" aria-label="Tipuri de proiecte realizate">
+            <article class="project-type project-type--systematic">
                 <i class="fas fa-map" aria-hidden="true"></i>
-                <span><strong>Cadastru sistematic</strong><small>Înregistrarea imobilelor pe sectoare cadastrale</small><em data-project-type-count="systematic"></em></span>
-            </button>
-            <button type="button" class="project-type" data-project-filter="documentation" aria-pressed="false">
+                <span><strong>Cadastru sistematic</strong><small>Înregistrarea imobilelor pe sectoare cadastrale</small><em>7 proiecte</em></span>
+            </article>
+            <article class="project-type project-type--documentation">
                 <i class="fas fa-file-signature" aria-hidden="true"></i>
-                <span><strong>Documentații cadastrale</strong><small>Carte Funciară și atestarea proprietății</small><em data-project-type-count="documentation"></em></span>
-            </button>
-            <button type="button" class="project-type" data-project-filter="land" aria-pressed="false">
+                <span><strong>Documentații cadastrale</strong><small>Carte Funciară și atestarea proprietății</small><em>30 proiecte</em></span>
+            </article>
+            <article class="project-type project-type--land">
                 <i class="fas fa-border-all" aria-hidden="true"></i>
-                <span><strong>Fond funciar și parcelare</strong><small>Planuri parcelare, titluri și puneri în posesie</small><em data-project-type-count="land"></em></span>
-            </button>
-            <button type="button" class="project-type" data-project-filter="survey" aria-pressed="false">
+                <span><strong>Fond funciar și parcelare</strong><small>Planuri parcelare, titluri și puneri în posesie</small><em>17 proiecte</em></span>
+            </article>
+            <article class="project-type project-type--survey">
                 <i class="fas fa-drafting-compass" aria-hidden="true"></i>
-                <span><strong>Studii topografice</strong><small>Ridicări, rețele și suport pentru proiectare</small><em data-project-type-count="survey"></em></span>
-            </button>
-            <button type="button" class="project-type" data-project-filter="infrastructure" aria-pressed="false">
+                <span><strong>Studii topografice</strong><small>Ridicări, rețele și suport pentru proiectare</small><em>9 proiecte</em></span>
+            </article>
+            <article class="project-type project-type--infrastructure">
                 <i class="fas fa-water" aria-hidden="true"></i>
-                <span><strong>Infrastructură edilitară</strong><small>Apă, canalizare, drumuri și trasee tehnice</small><em data-project-type-count="infrastructure"></em></span>
-            </button>
-        </div>
-
-        <div class="project-browser" data-project-browser>
-            <div class="project-controls">
-                <div class="project-filters" aria-label="Filtrare proiecte">
-                    <button type="button" class="project-filter is-active" data-project-filter="all" aria-pressed="true">Toate</button>
-                    <button type="button" class="project-filter" data-project-filter="systematic" aria-pressed="false">Cadastru sistematic</button>
-                    <button type="button" class="project-filter" data-project-filter="documentation" aria-pressed="false">Documentații</button>
-                    <button type="button" class="project-filter" data-project-filter="land" aria-pressed="false">Fond funciar</button>
-                    <button type="button" class="project-filter" data-project-filter="survey" aria-pressed="false">Topografie</button>
-                    <button type="button" class="project-filter" data-project-filter="infrastructure" aria-pressed="false">Infrastructură</button>
-                </div>
-                <label class="project-search">
-                    <span class="visually-hidden">Caută în proiecte</span>
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input type="search" placeholder="Caută localitate, beneficiar sau lucrare" data-project-search>
-                </label>
-            </div>
-
-            <div class="project-results-meta" aria-live="polite"><strong data-project-count>{{ site.data.projects | size }}</strong> proiecte găsite</div>
-
-            <div class="project-grid">
-                {% assign projects = site.data.projects | sort: 'year' | reverse %}
-                {% for project in projects %}
-                    {% if project.source == 'chestionar-2026' %}
-                        {% assign project_era = 'recent' %}
-                    {% else %}
-                        {% assign project_era = 'archive' %}
-                    {% endif %}
-                    {% assign project_county = project.county | default: 'Dolj' %}
-                    {% assign project_name_normalized = project.name | downcase %}
-                    {% if project.category == 'Cadastru sistematic' %}
-                        {% assign project_type = 'systematic' %}
-                        {% assign project_type_label = 'Cadastru sistematic' %}
-                    {% elsif project.category == 'Infrastructură edilitară' or project_name_normalized contains 'alimentare cu apa' or project_name_normalized contains 'alimentarea cu apa' or project_name_normalized contains 'canaliz' or project_name_normalized contains 'drum' %}
-                        {% assign project_type = 'infrastructure' %}
-                        {% assign project_type_label = 'Infrastructură edilitară' %}
-                    {% elsif project.category == 'Legea 165' or project.category == 'Planuri parcelare' or project_name_normalized contains 'fondului funciar' or project_name_normalized contains 'titlurilor de proprietate' or project_name_normalized contains 'punere in posesie' or project_name_normalized contains 'parcelar' or project_name_normalized contains 'legii 18' or project_name_normalized contains 'legii 1/2000' %}
-                        {% assign project_type = 'land' %}
-                        {% assign project_type_label = 'Fond funciar și parcelare' %}
-                    {% elsif project.category == 'Studii topografice' or project_name_normalized contains 'ridicari topografice' or project_name_normalized contains 'retelei de indesire' or project_name_normalized contains 'studiu topografic' %}
-                        {% assign project_type = 'survey' %}
-                        {% assign project_type_label = 'Studii topografice' %}
-                    {% else %}
-                        {% assign project_type = 'documentation' %}
-                        {% assign project_type_label = 'Documentații cadastrale' %}
-                    {% endif %}
-                    <article class="project-card" data-project-card data-era="{{ project_era }}" data-county="{{ project_county | downcase }}" data-category="{{ project_type }}">
-                        <div class="project-card-topline">
-                            <span class="project-year">{{ project.date | default: project.year }}</span>
-                            <span class="project-badge">{{ project_type_label }}</span>
-                        </div>
-                        <h3>{{ project.name }}</h3>
-                        <p class="project-client">{{ project.client }}</p>
-                        <div class="project-meta">
-                            {% if project.location %}<span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>{{ project.location }}, {{ project.county }}</span>{% elsif project_county %}<span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>{{ project_county }}</span>{% endif %}
-                        </div>
-                    </article>
-                {% endfor %}
-            </div>
-
-            <p class="project-empty" data-project-empty hidden>Nu am găsit proiecte pentru filtrul selectat.</p>
-            <div class="text-center">
-                <button type="button" class="btn btn-outline-dark project-more" data-project-more>Arată toate proiectele</button>
-            </div>
+                <span><strong>Infrastructură edilitară</strong><small>Apă, canalizare, drumuri și trasee tehnice</small><em>7 proiecte</em></span>
+            </article>
         </div>
     </div>
 </section>
-
-<script>
-    (() => {
-        const root = document.querySelector('#projects');
-        const browser = root && root.querySelector('[data-project-browser]');
-        if (!root || !browser) return;
-
-        const cards = Array.from(browser.querySelectorAll('[data-project-card]'));
-        const filters = Array.from(root.querySelectorAll('[data-project-filter]'));
-        const search = browser.querySelector('[data-project-search]');
-        const count = browser.querySelector('[data-project-count]');
-        const more = browser.querySelector('[data-project-more]');
-        const empty = browser.querySelector('[data-project-empty]');
-        let activeFilter = 'all';
-        let expanded = false;
-
-        root.querySelectorAll('[data-project-type-count]').forEach((typeCount) => {
-            const total = cards.filter((card) => card.dataset.category === typeCount.dataset.projectTypeCount).length;
-            typeCount.textContent = `${total} proiecte`;
-        });
-
-        const matchesFilter = (card) => {
-            if (activeFilter === 'all') return true;
-            return card.dataset.category === activeFilter;
-        };
-
-        const renderProjects = () => {
-            const query = search.value.trim().toLocaleLowerCase('ro');
-            const matches = cards.filter((card) => matchesFilter(card) && card.textContent.toLocaleLowerCase('ro').includes(query));
-            const limitResults = !expanded && !query;
-
-            cards.forEach((card) => {
-                const matchIndex = matches.indexOf(card);
-                card.hidden = matchIndex < 0 || (limitResults && matchIndex >= 12);
-            });
-
-            count.textContent = matches.length;
-            empty.hidden = matches.length !== 0;
-            more.hidden = Boolean(query) || matches.length <= 12;
-            more.textContent = expanded ? 'Arată mai puține' : `Arată toate cele ${matches.length} proiecte`;
-        };
-
-        filters.forEach((filter) => {
-            filter.addEventListener('click', () => {
-                activeFilter = filter.dataset.projectFilter;
-                expanded = false;
-                filters.forEach((item) => {
-                    const active = item.dataset.projectFilter === activeFilter;
-                    item.classList.toggle('is-active', active);
-                    item.setAttribute('aria-pressed', String(active));
-                });
-                renderProjects();
-            });
-        });
-
-        search.addEventListener('input', renderProjects);
-        more.addEventListener('click', () => {
-            expanded = !expanded;
-            renderProjects();
-        });
-
-        renderProjects();
-    })();
-</script>
