@@ -580,6 +580,302 @@ header .header-content .header-content-inner {
     }
 }
 
+// Project archive
+#projects {
+    background: #f7faf9;
+}
+
+.projects-intro {
+    margin-bottom: 34px;
+}
+
+.section-eyebrow {
+    margin-bottom: 10px;
+    color: $theme-secondary;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.projects-lead {
+    max-width: 760px;
+    margin-bottom: 0;
+    color: #5c6f75;
+    font-size: 18px;
+}
+
+.project-archive-summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    color: $theme-dark;
+    strong {
+        color: $theme-primary;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 54px;
+        line-height: 1;
+    }
+    span {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+}
+
+.project-type-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 42px;
+}
+
+.project-type,
+.project-card {
+    --project-accent: #{$theme-secondary};
+}
+
+[data-project-filter='systematic'],
+[data-category='systematic'] { --project-accent: #2f7472; }
+[data-project-filter='documentation'],
+[data-category='documentation'] { --project-accent: #355f78; }
+[data-project-filter='land'],
+[data-category='land'] { --project-accent: #9a6a2e; }
+[data-project-filter='survey'],
+[data-category='survey'] { --project-accent: #725a82; }
+[data-project-filter='infrastructure'],
+[data-category='infrastructure'] { --project-accent: #237b8f; }
+
+.project-type {
+    display: flex;
+    gap: 13px;
+    min-height: 150px;
+    padding: 22px 18px;
+    border: 1px solid #dbe6e3;
+    border-top: 4px solid var(--project-accent);
+    border-radius: 9px;
+    color: $theme-dark;
+    background: white;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba($theme-dark, .06);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    i {
+        margin-top: 2px;
+        color: var(--project-accent);
+        font-size: 23px;
+    }
+    strong,
+    small,
+    em {
+        display: block;
+    }
+    strong {
+        margin-bottom: 8px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    small {
+        color: #687a7f;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+    em {
+        margin-top: 12px;
+        color: var(--project-accent);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    &:hover,
+    &:focus,
+    &.is-active {
+        transform: translateY(-3px);
+        background: #f1f7f5;
+        box-shadow: 0 13px 30px rgba($theme-dark, .11);
+    }
+}
+
+.project-browser {
+    padding-top: 34px;
+    border-top: 1px solid #dbe5e2;
+}
+
+.project-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-filter {
+    padding: 8px 13px;
+    border: 1px solid #cbd9d5;
+    border-radius: 999px;
+    color: #465b61;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    &.is-active,
+    &:hover,
+    &:focus {
+        border-color: var(--project-accent, #{$theme-secondary});
+        color: white;
+        background: var(--project-accent, #{$theme-secondary});
+    }
+}
+
+.project-search {
+    position: relative;
+    flex: 0 1 360px;
+    i {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        color: #718287;
+        transform: translateY(-50%);
+    }
+    input {
+        width: 100%;
+        padding: 11px 16px 11px 42px;
+        border: 1px solid #cbd9d5;
+        border-radius: 7px;
+        color: $theme-dark;
+        background: white;
+        font-size: 14px;
+        &:focus {
+            border-color: $theme-secondary;
+            outline: 3px solid rgba($theme-secondary, .13);
+        }
+    }
+}
+
+.project-results-meta {
+    margin: 18px 0;
+    color: #687a7f;
+    font-size: 14px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid #dde7e4;
+    border-top: 4px solid var(--project-accent);
+    border-radius: 9px;
+    background: white;
+    box-shadow: 0 8px 22px rgba($theme-dark, .055);
+    h3 {
+        margin: 15px 0 10px;
+        color: $theme-dark;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+.project-card[hidden] {
+    display: none;
+}
+
+.project-card-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.project-year {
+    color: var(--project-accent);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.project-badge {
+    padding: 4px 8px;
+    border-radius: 999px;
+    color: var(--project-accent);
+    background: rgba($theme-secondary, .08);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.project-client {
+    margin-bottom: 14px;
+    color: #5c6f75;
+    font-size: 14px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #77868a;
+    font-size: 12px;
+    span {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    i {
+        margin-top: 2px;
+        color: var(--project-accent);
+    }
+}
+
+.project-more {
+    margin-top: 28px;
+}
+
+.project-empty {
+    padding: 34px;
+    color: #687a7f;
+    background: white;
+    text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+    .project-type-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project-archive-summary {
+        justify-content: flex-start;
+    }
+    .project-type-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-type {
+        min-height: auto;
+    }
+    .project-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .project-search {
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+
 #certificates {
     background: white;
     .certificate-card {
