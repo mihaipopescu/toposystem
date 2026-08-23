@@ -615,8 +615,9 @@ header .header-content .header-content-inner {
     strong {
         color: $theme-primary;
         font-family: 'Open Sans', sans-serif;
-        font-size: 54px;
+        font-size: clamp(38px, 3vw, 48px);
         line-height: 1;
+        white-space: nowrap;
     }
     span {
         font-size: 15px;
@@ -725,8 +726,9 @@ header .header-content .header-content-inner {
 }
 
 .project-details {
+    grid-column: 1 / -1;
     scroll-margin-top: 92px;
-    margin-top: 8px;
+    margin: 8px 0 18px;
     padding: 30px;
     border: 1px solid #d7e3e0;
     border-radius: 12px;

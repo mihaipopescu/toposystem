@@ -8,8 +8,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="project-archive-summary">
-                    <strong>{{ site.data.projects | size }}</strong>
-                    <span>proiecte<br>documentate</span>
+                    <strong>Peste 70</strong>
+                    <span>de proiecte<br>documentate</span>
                 </div>
             </div>
         </div>
@@ -35,9 +35,8 @@
                 <i class="fas fa-water project-type-icon" aria-hidden="true"></i>
                 <span class="project-type-copy"><strong>Infrastructură edilitară</strong><small>Apă, canalizare, drumuri și trasee tehnice</small><em>7 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
             </button>
-        </div>
 
-        <div id="project-details" class="project-details" data-project-details hidden tabindex="-1">
+            <div id="project-details" class="project-details" data-project-details hidden tabindex="-1">
             <div class="project-details-heading">
                 <div>
                     <p class="section-eyebrow">Lista proiectelor</p>
@@ -71,6 +70,7 @@
                     </article>
                 {% endfor %}
             </div>
+            </div>
         </div>
     </div>
 </section>
@@ -81,12 +81,20 @@
         if (!section) return;
 
         const toggles = Array.from(section.querySelectorAll('[data-project-toggle]'));
+        const grid = section.querySelector('.project-type-grid');
         const panel = section.querySelector('[data-project-details]');
         const title = panel.querySelector('[data-project-details-title]');
         const count = panel.querySelector('[data-project-details-count]');
         const close = panel.querySelector('[data-project-close]');
         const items = Array.from(panel.querySelectorAll('[data-project-item]'));
         let activeToggle = null;
+
+        const placePanelBelowToggleRow = (toggle) => {
+            const columns = getComputedStyle(grid).gridTemplateColumns.trim().split(/\s+/).length;
+            const toggleIndex = toggles.indexOf(toggle);
+            const rowEndIndex = Math.min(Math.ceil((toggleIndex + 1) / columns) * columns, toggles.length) - 1;
+            toggles[rowEndIndex].after(panel);
+        };
 
         const closePanel = (restoreFocus = true) => {
             panel.hidden = true;
@@ -116,6 +124,7 @@
                 activeToggle = toggle;
                 title.textContent = toggle.dataset.projectLabel;
                 count.textContent = matches.length;
+                placePanelBelowToggleRow(toggle);
                 panel.hidden = false;
 
                 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -124,5 +133,8 @@
         });
 
         close.addEventListener('click', () => closePanel());
+        window.addEventListener('resize', () => {
+            if (activeToggle && !panel.hidden) placePanelBelowToggleRow(activeToggle);
+        });
     })();
 </script>
