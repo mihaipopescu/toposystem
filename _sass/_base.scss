@@ -644,6 +644,7 @@ header .header-content .header-content-inner {
 .project-type {
     display: flex;
     gap: 13px;
+    width: 100%;
     min-height: 150px;
     padding: 22px 18px;
     border: 1px solid #dbe6e3;
@@ -651,9 +652,12 @@ header .header-content .header-content-inner {
     border-radius: 9px;
     color: $theme-dark;
     background: white;
+    font: inherit;
     text-align: left;
     box-shadow: 0 8px 24px rgba($theme-dark, .06);
-    i {
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    > .project-type-icon {
         margin-top: 2px;
         color: var(--project-accent);
         font-size: 23px;
@@ -675,11 +679,145 @@ header .header-content .header-content-inner {
         line-height: 1.45;
     }
     em {
-        margin-top: 12px;
+        margin-top: 10px;
         color: var(--project-accent);
         font-size: 12px;
         font-style: normal;
         font-weight: 700;
+    }
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+        transform: translateY(-3px);
+        background: #f1f7f5;
+        box-shadow: 0 13px 30px rgba($theme-dark, .11);
+    }
+    &:focus-visible {
+        outline: 3px solid rgba($theme-secondary, .28);
+        outline-offset: 3px;
+    }
+    &.is-active .project-type-action i {
+        transform: rotate(180deg);
+    }
+}
+
+.project-type-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.project-type-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 12px;
+    color: #51666b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    i {
+        font-size: 9px;
+        transition: transform .2s ease;
+    }
+}
+
+.project-details {
+    scroll-margin-top: 92px;
+    margin-top: 8px;
+    padding: 30px;
+    border: 1px solid #d7e3e0;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 14px 36px rgba($theme-dark, .08);
+    &:focus {
+        outline: none;
+    }
+}
+
+.project-details[hidden],
+.project-detail[hidden] {
+    display: none;
+}
+
+.project-details-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e8e6;
+    h3 {
+        margin: 0 0 6px;
+        color: $theme-dark;
+        font-size: 28px;
+    }
+    p:last-child {
+        margin: 0;
+        color: #6b7c81;
+        font-size: 14px;
+    }
+}
+
+.project-details-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #d2dfdc;
+    border-radius: 50%;
+    color: #52666b;
+    background: #f7faf9;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+        color: white;
+        background: $theme-dark;
+    }
+}
+
+.project-details-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.project-detail {
+    padding: 18px;
+    border: 1px solid #e0e8e6;
+    border-left: 3px solid $theme-secondary;
+    border-radius: 7px;
+    background: #fbfcfc;
+    h4 {
+        margin: 10px 0 8px;
+        color: $theme-dark;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    > p {
+        margin: 0;
+        color: #65767b;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+}
+
+.project-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    color: $theme-secondary;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
     }
 }
 
@@ -698,6 +836,15 @@ header .header-content .header-content-inner {
     }
     .project-type {
         min-height: auto;
+    }
+    .project-details {
+        padding: 22px 16px;
+    }
+    .project-details-heading h3 {
+        font-size: 23px;
+    }
+    .project-details-list {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -738,8 +885,13 @@ header .header-content .header-content-inner {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .service-box {
+    .service-box,
+    .project-type,
+    .project-type-action i {
         transition: none;
+    }
+    .service-box,
+    .project-type {
         &:hover {
             transform: none;
         }

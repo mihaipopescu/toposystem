@@ -15,26 +15,114 @@
         </div>
 
         <div class="project-type-grid" aria-label="Tipuri de proiecte realizate">
-            <article class="project-type project-type--systematic">
-                <i class="fas fa-map" aria-hidden="true"></i>
-                <span><strong>Cadastru sistematic</strong><small>Înregistrarea imobilelor pe sectoare cadastrale</small><em>7 proiecte</em></span>
-            </article>
-            <article class="project-type project-type--documentation">
-                <i class="fas fa-file-signature" aria-hidden="true"></i>
-                <span><strong>Documentații cadastrale</strong><small>Carte Funciară și atestarea proprietății</small><em>30 proiecte</em></span>
-            </article>
-            <article class="project-type project-type--land">
-                <i class="fas fa-border-all" aria-hidden="true"></i>
-                <span><strong>Fond funciar și parcelare</strong><small>Planuri parcelare, titluri și puneri în posesie</small><em>17 proiecte</em></span>
-            </article>
-            <article class="project-type project-type--survey">
-                <i class="fas fa-drafting-compass" aria-hidden="true"></i>
-                <span><strong>Studii topografice</strong><small>Ridicări, rețele și suport pentru proiectare</small><em>9 proiecte</em></span>
-            </article>
-            <article class="project-type project-type--infrastructure">
-                <i class="fas fa-water" aria-hidden="true"></i>
-                <span><strong>Infrastructură edilitară</strong><small>Apă, canalizare, drumuri și trasee tehnice</small><em>7 proiecte</em></span>
-            </article>
+            <button type="button" class="project-type project-type--systematic" data-project-toggle="systematic" data-project-label="Cadastru sistematic" aria-expanded="false" aria-controls="project-details">
+                <i class="fas fa-map project-type-icon" aria-hidden="true"></i>
+                <span class="project-type-copy"><strong>Cadastru sistematic</strong><small>Înregistrarea imobilelor pe sectoare cadastrale</small><em>7 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
+            </button>
+            <button type="button" class="project-type project-type--documentation" data-project-toggle="documentation" data-project-label="Documentații cadastrale" aria-expanded="false" aria-controls="project-details">
+                <i class="fas fa-file-signature project-type-icon" aria-hidden="true"></i>
+                <span class="project-type-copy"><strong>Documentații cadastrale</strong><small>Carte Funciară și atestarea proprietății</small><em>30 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
+            </button>
+            <button type="button" class="project-type project-type--land" data-project-toggle="land" data-project-label="Fond funciar și parcelare" aria-expanded="false" aria-controls="project-details">
+                <i class="fas fa-border-all project-type-icon" aria-hidden="true"></i>
+                <span class="project-type-copy"><strong>Fond funciar și parcelare</strong><small>Planuri parcelare, titluri și puneri în posesie</small><em>17 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
+            </button>
+            <button type="button" class="project-type project-type--survey" data-project-toggle="survey" data-project-label="Studii topografice" aria-expanded="false" aria-controls="project-details">
+                <i class="fas fa-drafting-compass project-type-icon" aria-hidden="true"></i>
+                <span class="project-type-copy"><strong>Studii topografice</strong><small>Ridicări, rețele și suport pentru proiectare</small><em>9 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
+            </button>
+            <button type="button" class="project-type project-type--infrastructure" data-project-toggle="infrastructure" data-project-label="Infrastructură edilitară" aria-expanded="false" aria-controls="project-details">
+                <i class="fas fa-water project-type-icon" aria-hidden="true"></i>
+                <span class="project-type-copy"><strong>Infrastructură edilitară</strong><small>Apă, canalizare, drumuri și trasee tehnice</small><em>7 proiecte</em><span class="project-type-action">Vezi proiectele <i class="fas fa-chevron-down" aria-hidden="true"></i></span></span>
+            </button>
+        </div>
+
+        <div id="project-details" class="project-details" data-project-details hidden tabindex="-1">
+            <div class="project-details-heading">
+                <div>
+                    <p class="section-eyebrow">Lista proiectelor</p>
+                    <h3 data-project-details-title></h3>
+                    <p><strong data-project-details-count></strong> proiecte documentate</p>
+                </div>
+                <button type="button" class="project-details-close" data-project-close aria-label="Închide lista proiectelor"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="project-details-list">
+                {% assign projects = site.data.projects | sort: 'year' | reverse %}
+                {% for project in projects %}
+                    {% assign project_name_normalized = project.name | downcase %}
+                    {% if project.category == 'Cadastru sistematic' %}
+                        {% assign project_type = 'systematic' %}
+                    {% elsif project.category == 'Infrastructură edilitară' or project_name_normalized contains 'alimentare cu apa' or project_name_normalized contains 'alimentarea cu apa' or project_name_normalized contains 'canaliz' or project_name_normalized contains 'drum' %}
+                        {% assign project_type = 'infrastructure' %}
+                    {% elsif project.category == 'Legea 165' or project.category == 'Planuri parcelare' or project_name_normalized contains 'fondului funciar' or project_name_normalized contains 'titlurilor de proprietate' or project_name_normalized contains 'punere in posesie' or project_name_normalized contains 'parcelar' or project_name_normalized contains 'legii 18' or project_name_normalized contains 'legii 1/2000' %}
+                        {% assign project_type = 'land' %}
+                    {% elsif project.category == 'Studii topografice' or project_name_normalized contains 'ridicari topografice' or project_name_normalized contains 'retelei de indesire' or project_name_normalized contains 'studiu topografic' %}
+                        {% assign project_type = 'survey' %}
+                    {% else %}
+                        {% assign project_type = 'documentation' %}
+                    {% endif %}
+                    <article class="project-detail" data-project-item="{{ project_type }}">
+                        <div class="project-detail-meta">
+                            <span>{{ project.date | default: project.year }}</span>
+                            {% if project.location %}<span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>{{ project.location }}{% if project.county %}, {{ project.county }}{% endif %}</span>{% elsif project.county %}<span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>{{ project.county }}</span>{% endif %}
+                        </div>
+                        <h4>{{ project.name }}</h4>
+                        {% if project.client %}<p>{{ project.client }}</p>{% endif %}
+                    </article>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    (() => {
+        const section = document.querySelector('#projects');
+        if (!section) return;
+
+        const toggles = Array.from(section.querySelectorAll('[data-project-toggle]'));
+        const panel = section.querySelector('[data-project-details]');
+        const title = panel.querySelector('[data-project-details-title]');
+        const count = panel.querySelector('[data-project-details-count]');
+        const close = panel.querySelector('[data-project-close]');
+        const items = Array.from(panel.querySelectorAll('[data-project-item]'));
+        let activeToggle = null;
+
+        const closePanel = (restoreFocus = true) => {
+            panel.hidden = true;
+            toggles.forEach((toggle) => {
+                toggle.classList.remove('is-active');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+            if (restoreFocus && activeToggle) activeToggle.focus();
+            activeToggle = null;
+        };
+
+        toggles.forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                if (activeToggle === toggle && !panel.hidden) {
+                    closePanel(false);
+                    return;
+                }
+
+                const category = toggle.dataset.projectToggle;
+                const matches = items.filter((item) => item.dataset.projectItem === category);
+                items.forEach((item) => { item.hidden = item.dataset.projectItem !== category; });
+                toggles.forEach((item) => {
+                    const active = item === toggle;
+                    item.classList.toggle('is-active', active);
+                    item.setAttribute('aria-expanded', String(active));
+                });
+                activeToggle = toggle;
+                title.textContent = toggle.dataset.projectLabel;
+                count.textContent = matches.length;
+                panel.hidden = false;
+
+                const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                requestAnimationFrame(() => panel.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' }));
+            });
+        });
+
+        close.addEventListener('click', () => closePanel());
+    })();
+</script>
