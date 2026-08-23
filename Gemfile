@@ -6,6 +6,12 @@ gem "jekyll-seo-tag", "~> 2.8.0"
 gem "jekyll-sitemap", "~> 1.4.0"
 gem "kramdown-parser-gfm", "~> 1.1.0"
 
+# CSV library needed by Ruby 3.4+: no longer in stdlib
+gem "csv"
+
+# base64 also removed from default gems since Ruby 3.4
+gem "base64"
+
 # Jekyll plugin gems are declared above with versions to avoid duplicate
 # specifications; keep plugin version constraints at the top-level so
 # Bundler doesn't encounter conflicting requirements in multiple places.
@@ -15,4 +21,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+# gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]  # optional Windows file watcher; skip if build tools unavailable

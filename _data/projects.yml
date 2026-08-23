@@ -1,0 +1,323 @@
+﻿---
+- name: Denumire
+  client: Beneficiar
+  area: Suprafa┼úa (Ha)
+  date: Data execu┼úiei
+- name: Cadastru extravilan Com. Teslui, Apele Vii, Castranova, Diosti, Dragotesti
+  client: S.C. Rural Oltenia S.R.L.
+  area: "-"
+  date: '2009'
+  year: 2009
+- name: Alimentare cu apa Gighera si Nedeia
+  client: Primaria Gighera
+  area: "-"
+  date: '2007'
+  year: 2007
+- name: Alimentare cu apa Comuna Giubega
+  client: Primaria Giubega
+  area: "-"
+  date: Iunie 2006
+  year: 2006
+- name: Alimentare cu apa Comuna Dranic si Padea
+  client: Primaria Dranic
+  area: "-"
+  date: Sept. 2005
+  year: 2005
+- name: Alimentare cu apa Comuna Farcasu
+  client: Consiliul Local Farcasu
+  area: "-"
+  date: Mai 2004
+  year: 2004
+- name: Inscriere in Cartea Funciara - SEDIUL SOCIETATII
+  client: S.C. COMBI DOLJ S.A.
+  area: 7,5ha
+  date: Ian. 2002
+  year: 2002
+  area_num: 7.5
+- name: Inscriere in Cartea Funciara - SECTIA VIATA NOUA
+  client: S.C. AGROMEC POIANA MARE
+  area: 0,60ha
+  date: Febr. 2002
+  year: 2002
+  area_num: 0.6
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - FERMA 2 CIOCANESTI
+  client: S.C. INTERAGRO TREGING SRL CRAIOVA
+  area: 20ha
+  date: Mart. 2002
+  year: 2002
+  area_num: 20.0
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - SEDIUL SOCIETATII
+  client: S.C. HORTICOLA BOURENI S.A.
+  area: 1,80ha
+  date: Mart. 2002
+  year: 2002
+  area_num: 1.8
+- name: Inscriere in Cartea Funciara - FABRICA DE OASE FACAI
+  client: S.C. OLFLAV IMPEX S.R.L. CRAIOVA
+  area: 1,80ha
+  date: Mart. 2002
+  year: 2002
+  area_num: 1.8
+- name: Ridicari topografice si executarea planurilor parcelare in vederea aplicarii
+    Legii 1/2000 a Fondului Funciar la mun. Craiova
+  client: Consiliul Local Craiova
+  area: 2500ha
+  date: Ian. 2001
+  year: 2001
+  area_num: 2500.0
+- name: Inscriere in Cartea Funciara - AMPLASAMENT MAGAZIN BAILESTI
+  client: CONSUMCOOP BAILESTI
+  area: 0,05ha
+  date: Mai 2001
+  year: 2001
+  area_num: 0.05
+- name: Inscriere in Cartea Funciara - AMPLASAMENT DABULENI - SEDIUL SOCIETATII
+  client: BANCA INTERNATIONALA A RELIGIILOR CRAIOVA
+  area: 0,10ha
+  date: Mai 2001
+  year: 2001
+  area_num: 0.1
+- name: Ridicari topografice com. Farcas jud. Dolj in vederea Alimentarii cu apa a
+    localitatii
+  client: CONSILIUL LOCAL FARCAS
+  area: 10Km de drumuri
+  date: Iunie 2001
+  year: 2001
+- name: "Inscriere in Cartea Funciara\x96 SILOZ SEGARCEA"
+  client: S.C.COMCEREAL S.A. CRAIOVA
+  area: 5,80ha
+  date: Iulie 2001
+  year: 2001
+  area_num: 5.8
+- name: Inscriere in Cartea Funciara - FERMA BISTRET
+  client: S.C. AGROCELACTIS S.A. RAST
+  area: 10ha
+  date: Sept. 2001
+  year: 2001
+  area_num: 10.0
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 -SEDIUL SOCIETATII
+  client: S.C. COMBI DOLJ S.A.
+  area: 7,5ha
+  date: Nov. 2001
+  year: 2001
+  area_num: 7.5
+- name: Ridicari topografice in zona Tarlaua 28 (Azilul de Batr├óni Catolic) Craiova
+  client: S.C. PROSPECT S.R.L. CRAIOVA
+  area: 2,0ha
+  date: Feb. 2000
+  year: 2000
+  area_num: 2.0
+- name: Ridicari topografice in zona Hanul Doctorului (Satul de vacanta) Craiova
+  client: S.C. ARHIGROUP PROCON S.R.L. CRAIOVA
+  area: 3,02ha
+  date: Mart.2000
+  year: 2000
+  area_num: 3.02
+- name: Inscriere in Cartea Funciara - SEDIUL SOCIETATII
+  client: S.C. AGROMEC MACESU S.A.
+  area: 6,0ha
+  date: Apr. 2000
+  year: 2000
+  area_num: 6.0
+- name: Inscriere in Cartea Funciara - SEDIUL SOCIETATII
+  client: S.C. AGRINDUSTRIALA SERVICE S.A. CRAIOVA
+  area: 1,2ha
+  date: Apr. 2000
+  year: 2000
+  area_num: 1.2
+- name: "Inscriere in Cartea Funciara \x96 AMPLASAMENT BAILESTI"
+  client: S.C. TUNIL COMIMPEX S.R.L. CRAIOVA
+  area: 1,0ha
+  date: Apr. 2000
+  year: 2000
+  area_num: 1.0
+- name: "Inscriere in Cartea Funciara \x96 AMPLASAMENT BECHET"
+  client: S.C. TUNIL COMIMPEX S.R.L. CRAIOVA
+  area: 1,1ha
+  date: Iulie. 2000
+  year: 2000
+  area_num: 1.1
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - AMPLASAMENT LUNCA
+  client: S.C.SERICAROM S.A. CRAIOVA
+  area: 2,23ha
+  date: Aug. 2000
+  year: 2000
+  area_num: 2.23
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - BAZA TERPEZITA
+  client: S.C. COMCEREAL S.A. CRAIOVA
+  area: 7,5ha
+  date: Oct. 2000
+  year: 2000
+  area_num: 7.5
+- name: Inscriere in Cartea Funciara
+  client: S.C.SERICAROM S.A. CRAIOVA
+  area: 2,23ha
+  date: Nov. 2000
+  year: 2000
+  area_num: 2.23
+- name: Inscriere in Cartea Funciara - SECTIA TUNARII VECHI
+  client: S.C. AGROMEC POIANA MARE
+  area: 0,80ha
+  date: Dec. 2000
+  year: 2000
+  area_num: 0.8
+- name: Inscriere in Cartea Funciara - AMPLASAMENT Str. Caracal nr. 140
+  client: S.C. OLTINEX S.A. CRAIOVA
+  area: 2,5ha
+  date: Dec. 2000
+  year: 2000
+  area_num: 2.5
+- name: Lucrari de verificare a Documentatiilor intocmite conf. HG 834/1991 la peste
+    200 de societati comerciale din judetul Dolj
+  client: Societati Comerciale
+  area: 2000ha
+  date: Dec. 1993 - ian. 2000
+  year: 1993
+  area_num: 2000.0
+- name: Documentatie topo in vederea obtinerii Autorizatiei de constructie - COMPLEX
+    COMERCIAL BACRIZ
+  client: S.C BACRIZ IMPEX SRL
+  area: 0,80ha
+  date: Iun. 1999
+  year: 1999
+  area_num: 0.8
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - BAZA PLENITA;
+  client: SC COMCEREAL S.A. CRAIOVA
+  area: 1,20ha
+  date: Iul. 1999
+  year: 1999
+  area_num: 1.2
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - BAZA BECHET;
+  client: SC COMCEREAL S.A. CRAIOVA
+  area: 1,8ha
+  date: Iul. 1999
+  year: 1999
+  area_num: 1.8
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - SILOZ SEGARCEA;
+  client: SC COMCEREAL S.A. CRAIOVA
+  area: 5,80ha
+  date: Iul. 1999
+  year: 1999
+  area_num: 5.8
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - BAZA SCAESTI;
+  client: SC COMCEREAL S.A. CRAIOVA
+  area: 0,90ha
+  date: Iul. 1999
+  year: 1999
+  area_num: 0.9
+- name: Doc. topo pentru obtinerea Certificatului de atestare a dreptului de proprietate,
+    conf.H.G.834/91 - BAZA RAST;
+  client: SC COMCEREAL S.A. CRAIOVA
+  area: 2,5ha
+  date: Iul. 1999
+  year: 1999
+  area_num: 2.5
+- name: Masuratori topo la incintele si halzile minelor Testioara, Cristotel si Chiejd
+    apartinand Exploatarii Miniere Salaj
+  client: S.C. PROMINFO S.A. PLOIESTI
+  area: 2,5ha
+  date: Mai 1999
+  year: 1999
+  area_num: 2.5
+- name: Ridicari topografice in zona Casa Stiintei si Tehnicii (Magazinul BILLA) Craiova
+  client: S.C. PROSPECT S.R.L. CRAIOVA
+  area: 7,5ha
+  date: Nov. 1999
+  year: 1999
+  area_num: 7.5
+- name: Ridicari topografice in zona Casa Stiintei si Tehnicii (Biserica Greco-Catolica)
+    Craiova
+  client: Biserica Greco-Catolica
+  area: 0,30ha
+  date: Nov. 1999
+  year: 1999
+  area_num: 0.3
+- name: 'Ridicari topografice in vederea ampalsarii de piloni pentru Telecomunicatii
+    in comunele Botosesti-Paia; Cernatesti: Sopot; Secu; Argetoaia; Simnicu de Sus.'
+  client: Biserica Greco-Catolica
+  area: 0,30ha
+  date: Nov. 1999
+  year: 1999
+  area_num: 0.3
+- name: Ridicari topografice in vederea aplicarii Legii 18/1991 a Fondului Funciar
+    la com. Giubega
+  client: Consiliul Local Giubega
+  area: 2500ha
+  date: Iul. 1998
+  year: 1998
+  area_num: 2500.0
+- name: Ridicari topografice in vederea aplicarii Legii 18/1991 a Fondului Funciar
+    la com. Piscu Vechi
+  client: Consiliul Local Piscu Vechi
+  area: 1800ha
+  date: '1998'
+  year: 1998
+  area_num: 1800.0
+- name: Ridicari topografice si executarea planurilor parcelare in vederea aplicarii
+    Legii 18/1991 a Fondului Funciar la com. Ostroveni
+  client: Consiliul Local Ostroveni
+  area: 1500ha
+  date: 1997 - 1998
+  year: 1997
+  area_num: 1500.0
+- name: Ridicari topografice in vederea aplicarii Legii 18/1991 a Fondului Funciar
+    la extravilan oras Calafat
+  client: Consiliul Local Calafat
+  area: 2500ha
+  date: Mart. 1997
+  year: 1997
+  area_num: 2500.0
+- name: Ridicari topografice in vederea aplicarii Legii 18/1991 a Fondului Funciar
+    la com. Dabuleni
+  client: Consiliul Local Dabuleni
+  area: 6000ha
+  date: Iul. 1995 - sept. 1995
+  year: 1995
+  area_num: 6000.0
+- name: Ridicari topografice si executarea planurilor parcelare in vederea aplicarii
+    Legii 18/1991 a Fondului Funciar la com. Unirea
+  client: Consiliul Local Unirea
+  area: 4500ha
+  date: Mart. 1995 - Iul. 1995
+  year: 1995
+  area_num: 4500.0
+- name: Executarea retelei de indesire la com. Dabuleni
+  client: Consiliul Local Dabuleni
+  area: "-"
+  date: Mai. 1995
+  year: 1995
+- name: Executarea retelei de indesire la com. Unirea
+  client: Consiliul Local Unirea
+  area: 4500ha
+  date: Mart. 1995
+  year: 1995
+  area_num: 4500.0
+- name: Executarea retelei de indesire la com. Bucovat
+  client: Consiliul Local Bucovat
+  area: 2000ha
+  date: '1994'
+  year: 1994
+  area_num: 2000.0
+- name: Ridicari topografice in vederea aplicarii Legii 18/1991 a Fondului Funciar
+    la com. Bucovat, sat Leamna de Sus
+  client: Consiliul Local Bucovat
+  area: 1500ha
+  date: '1994'
+  year: 1994
+  area_num: 1500.0
+- name: Lucrari de intocmire si verificare a titlurilor de proprietate la comunele
+    Salcuta, Secu, Seaca de Padure, Terpezita
+  client: Consiliul Local
+  area: "-"
+  date: Dec. 1992 - Dec. 1993
+  year: 1992
+
