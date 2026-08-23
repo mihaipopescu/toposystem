@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://toposystem.ro/servicii/cadastru-intabulare/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/constructii-carte-funciara/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/dezmembrare-alipire/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/evaluari/</loc>
+</url>
+<url>
 <loc>https://toposystem.ro/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/lucrari-speciale/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/proiectare-edilitara/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/ridicare-topografica/</loc>
+</url>
+<url>
+<loc>https://toposystem.ro/servicii/trasari-topografice/</loc>
 </url>
 </urlset>
