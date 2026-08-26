@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css?v=1787686474" type="text/css">
+    <link rel="stylesheet" href="/css/main.css?v=1787774326" type="text/css">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Trasări topografice | TopoSystem Craiova</title>
@@ -42,6 +42,36 @@
 {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"TopoSystem Craiova"},"description":"Materializarea în teren a limitelor, axelor și cotelor necesare lucrărilor de proprietate și construcții.","headline":"Trasări topografice","url":"https://toposystem.ro/servicii/trasari-topografice/"}</script>
 <!-- End Jekyll SEO tag -->
 
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "TopoSystem Craiova",
+      "url": "https://toposystem.ro",
+      "logo": "https://toposystem.ro/img/toposystem-mark.svg",
+      "email": "sorin.popescu@toposystem.ro",
+      "telephone": "+40744699280",
+      "description": "Firmă de cadastru, topografie și proiecte edilitare",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Mihail Kogălniceanu, nr. 19, bl. 97, sc. E, ap. 12",
+        "addressLocality": "Craiova",
+        "addressRegion": "Dolj",
+        "addressCountry": "RO"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Dolj" },
+        { "@type": "AdministrativeArea", "name": "Vâlcea" }
+      ],
+      "knowsAbout": [
+        "cadastru și intabulare",
+        "ridicări și trasări topografice",
+        "documentații cadastrale",
+        "proiectare edilitară"
+      ]
+    }
+    </script>
 
 </head>
 
@@ -87,7 +117,7 @@
         <h1>Trasări topografice</h1>
         <p>Materializarea în teren a limitelor, axelor și cotelor necesare lucrărilor de proprietate și construcții.</p>
         <div class="hero-actions">
-          <a href="mailto:sorin.popescu@toposystem.ro?subject=Solicitare%20ofertă%20-%20Tras%C4%83ri+topografice" class="btn btn-primary btn-xl">Solicită ofertă</a>
+          <a href="#contact" class="btn btn-primary btn-xl">Solicită ofertă</a>
           <a href="tel:+40744699280" class="btn btn-outline-light btn-xl"><i class="fas fa-phone" aria-hidden="true"></i> 0744699280</a>
         </div>
       </div>
@@ -123,7 +153,7 @@
             <div class="service-cta">
               <h2>Aveți nevoie de acest serviciu?</h2>
               <p>Trimiteți localitatea, tipul imobilului și documentele disponibile. Vă răspundem cu pașii potriviți situației.</p>
-              <a href="mailto:sorin.popescu@toposystem.ro?subject=Solicitare%20ofertă%20-%20Tras%C4%83ri+topografice" class="btn btn-primary btn-xl">Cereți o ofertă</a>
+              <a href="#contact" class="btn btn-primary btn-xl">Cereți o ofertă</a>
             </div>
           </article>
         </div>
@@ -132,35 +162,114 @@
   </main>
   <section id="contact">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-                <h2 class="section-heading">Contact</h2>
-                <hr class="primary">
-                <p>Str. Mihail Kogălniceanu, nr. 19, bl. 97, sc. E, Ap. 12, Craiova</p>
+        <div class="row g-5 align-items-start">
+            <div class="col-lg-7">
+                <div class="quote-card">
+                    <p class="section-eyebrow">Solicitare ofertă</p>
+                    <h2 class="section-heading">Spuneți-ne despre lucrare</h2>
+                    <p class="quote-lead">Câteva informații sunt suficiente pentru a începe. Vă răspundem cu întrebările și pașii potriviți situației.</p>
+
+                    <form class="quote-form" data-quote-form data-email="sorin.popescu@toposystem.ro" data-whatsapp="40744699280">
+                        <div class="quote-form-grid">
+                            <label>
+                                <span>Nume</span>
+                                <input type="text" name="name" autocomplete="name" required>
+                            </label>
+                            <label>
+                                <span>Telefon sau e-mail</span>
+                                <input type="text" name="contact" autocomplete="email" required>
+                            </label>
+                            <label>
+                                <span>Localitate</span>
+                                <input type="text" name="location" autocomplete="address-level2" required>
+                            </label>
+                            <label>
+                                <span>Tipul lucrării</span>
+                                <select name="service" required>
+                                    <option value="">Selectați serviciul</option>
+                                    <option>Cadastru și intabulare</option>
+                                    <option>Dezmembrare sau alipire</option>
+                                    <option>Ridicare topografică</option>
+                                    <option>Trasare topografică</option>
+                                    <option>Construcții și Cartea Funciară</option>
+                                    <option>Proiectare edilitară</option>
+                                    <option>Servicii de evaluare</option>
+                                    <option>Alt tip de lucrare</option>
+                                </select>
+                            </label>
+                            <label class="quote-form-full">
+                                <span>Detalii <small>(opțional)</small></span>
+                                <textarea name="details" rows="4" placeholder="Tipul imobilului, suprafața aproximativă, documentele disponibile sau termenul avut în vedere"></textarea>
+                            </label>
+                        </div>
+                        <div class="quote-actions">
+                            <button type="submit" class="btn btn-primary btn-xl"><i class="fas fa-envelope" aria-hidden="true"></i> Trimite prin e-mail</button>
+                            <button type="button" class="btn btn-whatsapp btn-xl" data-quote-whatsapp><i class="fab fa-whatsapp" aria-hidden="true"></i> Trimite pe WhatsApp</button>
+                        </div>
+                        <p class="quote-privacy"><i class="fas fa-lock" aria-hidden="true"></i> Datele nu sunt stocate pe site. Se va deschide aplicația dvs. de e-mail sau WhatsApp.</p>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-3 offset-lg-1 text-center">
-                <a href="mailto:sorin.popescu@toposystem.ro">
-                    <i class="fas fa-3x fa-envelope wow animate__bounceIn" data-wow-delay=".1s"></i>
-                    <p>sorin.popescu@toposystem.ro</p>
-                </a>
-            </div>
-            <div class="col-lg-3 offset-lg-1 text-center">
-                <a href="tel:+40744699280">
-                    <i class="fas fa-3x fa-mobile-alt wow animate__bounceIn" data-wow-delay=".1s"></i>
-                    <p>0744699280</p>
-                </a>
-            </div>
-            <div class="col-lg-3 offset-lg-1 text-center">
-                <a href="tel:+40251417842">
-                    <i class="fas fa-3x fa-fax wow animate__bounceIn" data-wow-delay=".1s"></i>
-                    <p>0251417842</p>
-                </a>
+
+            <div class="col-lg-5">
+                <div class="contact-details">
+                    <p class="section-eyebrow">Contact direct</p>
+                    <h2 class="section-heading">TopoSystem Craiova</h2>
+                    <address>Str. Mihail Kogălniceanu, nr. 19, bl. 97, sc. E, Ap. 12, Craiova</address>
+                    <a class="contact-detail" href="tel:+40744699280">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span><small>Telefon</small><strong>0744699280</strong></span>
+                    </a>
+                    <a class="contact-detail" href="mailto:sorin.popescu@toposystem.ro">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span><small>E-mail</small><strong>sorin.popescu@toposystem.ro</strong></span>
+                    </a>
+                    <div class="contact-detail contact-detail-static">
+                        <i class="fas fa-fax" aria-hidden="true"></i>
+                        <span><small>Fax</small><strong>0251417842</strong></span>
+                    </div>
+                    <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Str.+Mihail+Kog%C4%83lniceanu%2C+nr.+19%2C+bl.+97%2C+sc.+E%2C+Ap.+12%2C+Craiova" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-arrow" aria-hidden="true"></i> Deschide adresa în Google Maps</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    (() => {
+        const forms = document.querySelectorAll('[data-quote-form]');
+
+        const messageFrom = (form) => {
+            const data = new FormData(form);
+            return [
+                'Bună ziua, doresc informații despre o lucrare TopoSystem.',
+                '',
+                `Nume: ${data.get('name')}`,
+                `Contact: ${data.get('contact')}`,
+                `Localitate: ${data.get('location')}`,
+                `Tipul lucrării: ${data.get('service')}`,
+                `Detalii: ${data.get('details') || 'Nu au fost adăugate.'}`
+            ].join('\n');
+        };
+
+        const isValid = (form) => form.reportValidity();
+
+        forms.forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                if (!isValid(form)) return;
+                const service = new FormData(form).get('service');
+                window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(`Solicitare ofertă – ${service}`)}&body=${encodeURIComponent(messageFrom(form))}`;
+            });
+
+            form.querySelector('[data-quote-whatsapp]').addEventListener('click', () => {
+                if (!isValid(form)) return;
+                const url = `https://wa.me/${form.dataset.whatsapp}?text=${encodeURIComponent(messageFrom(form))}`;
+                window.open(url, '_blank', 'noopener,noreferrer');
+            });
+        });
+    })();
+</script>
 
   <!-- Bootstrap 5 JS Bundle (includes Popper.js) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -176,7 +285,7 @@
 
   <div class="mobile-contact-bar d-lg-none" aria-label="Contact rapid">
     <a href="tel:+40744699280"><i class="fas fa-phone" aria-hidden="true"></i> Sună</a>
-    <a href="mailto:sorin.popescu@toposystem.ro?subject=Solicitare%20ofertă"><i class="fas fa-envelope" aria-hidden="true"></i> Cere ofertă</a>
+    <a href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Cere ofertă</a>
   </div>
 </body>
 </html>
