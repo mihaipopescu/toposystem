@@ -24,4 +24,34 @@
 
     {% seo %}
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "TopoSystem Craiova",
+      "url": {{ site.url | jsonify }},
+      "logo": {{ '/img/toposystem-mark.svg' | absolute_url | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "telephone": "+4{{ site.mobile }}",
+      "description": {{ site.description | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Mihail Kogălniceanu, nr. 19, bl. 97, sc. E, ap. 12",
+        "addressLocality": "Craiova",
+        "addressRegion": "Dolj",
+        "addressCountry": "RO"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Dolj" },
+        { "@type": "AdministrativeArea", "name": "Vâlcea" }
+      ],
+      "knowsAbout": [
+        "cadastru și intabulare",
+        "ridicări și trasări topografice",
+        "documentații cadastrale",
+        "proiectare edilitară"
+      ]
+    }
+    </script>
+
 </head>
